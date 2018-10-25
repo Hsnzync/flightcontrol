@@ -1,0 +1,10 @@
+.highlight {
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    width: 370px;
+    height: 695px;
+    top: 40px;
+    bottom: auto;
+    left: auto;
+    right: auto;
+}
