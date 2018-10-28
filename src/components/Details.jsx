@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import {Link} from 'react-router-dom';
 import Request from 'superagent';
 import _ from 'lodash';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRunning } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faRunning)
+library.add(faBookmark)
 
 class Details extends Component {
     constructor(props) {
@@ -19,8 +18,7 @@ class Details extends Component {
             passenger: false,
         };
 
-        this.showSelected = this.showSelected.bind(this);
-        this.handleInputChange = this.handleInputChange.bind(this);
+        this.saveFlight = this.saveFlight.bind(this);
         
         Request
             .get("https://api.schiphol.nl/public-flights/flights?app_id=84d73276&app_key=f9177c625c6b99c31938170e49299455")
@@ -34,48 +32,27 @@ class Details extends Component {
             });
     }
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.passenger : target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
-    showSelected(event) {
-        this.setState({
-            showComponent: event.target.checked
-        });
+    saveFlight() {
+        console.log("save flight here...")
     }
 
     render() {
-
         let flights = _.map(this.state.items, (flight) => {
             return (
               <div className='showData'>
-                <h2>Flight - {flight.flightName}</h2>
+                <div className="data-header">
+                    <h2>Flight {flight.flightName}</h2>
+                    <h6>{flight.scheduleDate}</h6>
+                </div>
+
                 <ul key={flight.id}>
                     <li><b>Terminal:</b> {flight.terminal}</li>
                     <li><b>Gate:</b> {flight.gate}</li>
-                    <li><b>Schedule Date:</b> {flight.scheduleDate}</li>
-                    <li><b>Schedule Time:</b> {flight.scheduleTime}</li>
+                    <li><b>Departure time:</b> {flight.scheduleTime}</li>
                     <li><b>Flightnumber:</b> {flight.flightNumber}</li>
-                    <li className="omw"><b>On my Way:</b>
-                        <label htmlFor={items} className="customLabel">{items}</label>
-                        <div className="inputBox">
-                            <input 
-                                className="customCheckbox"
-                                name='passenger'
-                                value={items} 
-                                id="option" 
-                                type="checkbox"
-                                checked={this.state.passenger}
-                                onChange={this.handleInputChange}
-                                onClick={this.showSelected}
-                            />
-                        </div>
+                    <li className="save">
+                        <button onClick={this.saveFlight}>
+                            <FontAwesomeIcon icon="bookmark"></FontAwesomeIcon>Save</button>
                     </li>
                 </ul>
               </div>
@@ -86,17 +63,15 @@ class Details extends Component {
 
         if(!isLoaded) {
             return(
-                <div className="main">
-                    <span className="load-section">Loading flights...</span>
+                <div>
+                        <p className="required_info">Loading flights...</p>
                 </div>
             );
         }
 
         else {
             return (
-                <div className="main">
-                    <Link className='entry_btn' to='/'>Remove Flights</Link>
-                    
+                <div className="results">
                     {flights}
                 </div>
             ); 

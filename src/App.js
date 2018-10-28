@@ -6,15 +6,12 @@ import Home from './components/Home';
 import Details from './components/Details';
 import Header from './components/Header';
 
-
 const App = () => (
     <div className="App">
     
-        <Header />
-        <BrowserRouter basename="/flightcontrol/">
-            <div>
+        <BrowserRouter basename="/flight-control/">
+            <div className="main">
                 <Route exact path="/" component={Home}/>
-                <Route path={"/details"} component={Details}/>
             </div>
         </BrowserRouter>   
     </div>

@@ -1,9 +1,15 @@
 import React from 'react';
 import '../css/App.css';
+import {Link} from 'react-router-dom';
 
 const Header = () => (
     <header>
-		<h2 className="header">Schiphol Flight Control</h2>
+		<ul>
+			<li className="title">Schiphol Flight Control</li>
+			<li className="nav-item">
+				<Link to="">My flights</Link>
+			</li>
+		</ul>
 	</header>
 );
 
