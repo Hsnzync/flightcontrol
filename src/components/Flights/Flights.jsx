@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/App.css';
+import './Flights.css';
 import Request from 'superagent';
 import _ from 'lodash';
 
@@ -9,7 +9,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faBookmark)
 
-class Details extends Component {
+class Flights extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -48,7 +48,7 @@ class Details extends Component {
                 <ul key={flight.id}>
                     <li><b>Terminal:</b> {flight.terminal}</li>
                     <li><b>Gate:</b> {flight.gate}</li>
-                    <li><b>Departure time:</b> {flight.scheduleTime}</li>
+                    <li><b>Departure time:</b> {flight.scheduleTime.slice(0,5)} am</li>
                     <li><b>Flightnumber:</b> {flight.flightNumber}</li>
                     <li className="save">
                         <button onClick={this.saveFlight}>
@@ -64,7 +64,7 @@ class Details extends Component {
         if(!isLoaded) {
             return(
                 <div>
-                        <p className="required_info">Loading flights...</p>
+                    <p className="required_info">Loading flights...</p>
                 </div>
             );
         }
@@ -79,4 +79,4 @@ class Details extends Component {
     }
 }
 
-export default Details;
+export default Flights;

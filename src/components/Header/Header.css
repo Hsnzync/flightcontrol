@@ -1,0 +1,71 @@
+header {
+  background: #fff;
+  margin: 0;
+  padding: 15px 30px;
+  -webkit-box-shadow: 2px 20px 83px -18px #383838;
+    -webkit-box-shadow-box-shadow: 2px 20px 83px -18px #383838; }
+  header .nav_section {
+    float: right;
+    position: relative;
+    bottom: 10px; }
+    header .nav_section a {
+      color: #42ab9e;
+      text-decoration: none; }
+    header .nav_section .entry_btn {
+      margin: 0 0 0 20px;
+      padding: 15px 20px;
+      -webkit-transition: .9s;
+      -moz-transition: 0.9s;
+        -moz-transition--ms-transition: .9s;
+        -moz-transition--o-transition: .9s;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      font-size: 15px;
+      border: 2px solid #42ab9e;
+      background: transparent;
+      cursor: pointer; }
+      header .nav_section .entry_btn:hover {
+        -webkit-transition: .5s;
+        -moz-transition: 0.5s;
+          -moz-transition--ms-transition: .5s;
+          -moz-transition--o-transition: .5s;
+        opacity: 1;
+        border: 2px solid #42ab9e;
+        background: #42ab9e; }
+        header .nav_section .entry_btn:hover a {
+          color: #fff; }
+      header .nav_section .entry_btn a {
+        color: #42ab9e;
+        text-decoration: none; }
+  header ul {
+    list-style: none;
+    padding: 0; }
+    header ul li {
+      display: inline-block; }
+    header ul .title {
+      font-family: 'Arial';
+      font-size: 25px;
+      font-weight: 700;
+      color: #42ab9e;
+      display: inline-block;
+      margin: 0 10px; }
+      header ul .title a {
+        color: #42ab9e;
+        text-decoration: none; }
+    header ul .nav-item {
+      float: right;
+      position: absolute;
+      right: 210px;
+      top: 35px; }
+      header ul .nav-item a {
+        letter-spacing: 1px;
+        color: #42ab9e;
+        text-decoration: none; }
+
+@media screen and (max-width: 589px) {
+  header ul .title {
+    font-size: 15px; }
+  header ul .nav-item {
+    display: none; }
+  header .nav_section {
+    bottom: 18px; } }

@@ -1,17 +1,17 @@
 import React from 'react';
-import './css/App.css';
+import './css/Global.css';
 import {Route, BrowserRouter} from 'react-router-dom';
 
 import Home from './components/Home';
-import Details from './components/Details';
-import Header from './components/Header';
+import Overview from './components/Overview/Overview';
 
 const App = () => (
     <div className="App">
     
-        <BrowserRouter basename="/flight-control/">
+        <BrowserRouter basename="/flightcontrol/">
             <div className="main">
                 <Route exact path="/" component={Home}/>
+                <Route exact path="/overview" component={Overview}/>
             </div>
         </BrowserRouter>   
     </div>

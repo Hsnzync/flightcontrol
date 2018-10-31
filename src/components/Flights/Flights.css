@@ -1,0 +1,66 @@
+.results {
+  margin-top: 50px; }
+
+.data {
+  margin: 0 auto; }
+  .data div {
+    margin-top: 60px; }
+    .data div ul {
+      margin: 50px 0; }
+
+.save button,
+.delete button {
+  background: #42ab9e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: .6s;
+  letter-spacing: 1px; }
+  .save button svg,
+  .delete button svg {
+    margin-right: 10px; }
+  .save button:hover,
+  .delete button:hover {
+    background: #000; }
+
+.delete button {
+  background: #C20000; }
+
+.showData {
+  margin: 40px 20px;
+  display: inline-block;
+  width: 30%;
+  background: #fff;
+  -webkit-box-shadow: 2px 20px 83px -18px #383838;
+    -webkit-box-shadow-box-shadow: 2px 20px 83px -18px #383838; }
+  .showData ul {
+    padding: 0 40px; }
+    .showData ul li {
+      margin: 10px 20px;
+      list-style: none; }
+  .showData .data-header {
+    margin: 0 0 20px 0;
+    padding: 20px 60px;
+    background: #eee;
+    border-radius: 5px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.05); }
+    .showData .data-header h2 {
+      color: #000;
+      margin: 0; }
+    .showData .data-header h6 {
+      margin: 5px 0 0 0;
+      font-size: 15px;
+      color: #888;
+      font-weight: 100; }
+
+@media screen and (max-width: 1249px) {
+  .showData {
+    width: 45%; } }
+
+@media screen and (max-width: 833px) {
+  .showData {
+    width: 90%; } }
