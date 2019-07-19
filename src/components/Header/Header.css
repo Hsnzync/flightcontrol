@@ -9,7 +9,7 @@ header {
     position: relative;
     bottom: 10px; }
     header .nav_section a {
-      color: #42ab9e;
+      color: #6BACFF;
       text-decoration: none; }
     header .nav_section .entry_btn {
       margin: 0 0 0 20px;
@@ -21,7 +21,7 @@ header {
       letter-spacing: 1px;
       border-radius: 5px;
       font-size: 15px;
-      border: 2px solid #42ab9e;
+      border: 2px solid #6BACFF;
       background: transparent;
       cursor: pointer; }
       header .nav_section .entry_btn:hover {
@@ -30,12 +30,12 @@ header {
           -moz-transition--ms-transition: .5s;
           -moz-transition--o-transition: .5s;
         opacity: 1;
-        border: 2px solid #42ab9e;
-        background: #42ab9e; }
+        border: 2px solid #6BACFF;
+        background: #6BACFF; }
         header .nav_section .entry_btn:hover a {
           color: #fff; }
       header .nav_section .entry_btn a {
-        color: #42ab9e;
+        color: #6BACFF;
         text-decoration: none; }
   header ul {
     list-style: none;
@@ -46,11 +46,11 @@ header {
       font-family: 'Arial';
       font-size: 25px;
       font-weight: 700;
-      color: #42ab9e;
+      color: #6BACFF;
       display: inline-block;
       margin: 0 10px; }
       header ul .title a {
-        color: #42ab9e;
+        color: #6BACFF;
         text-decoration: none; }
     header ul .nav-item {
       float: right;
@@ -59,7 +59,7 @@ header {
       top: 35px; }
       header ul .nav-item a {
         letter-spacing: 1px;
-        color: #42ab9e;
+        color: #6BACFF;
         text-decoration: none; }
 
 @media screen and (max-width: 589px) {

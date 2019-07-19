@@ -21,9 +21,11 @@ class Flights extends Component {
         this.saveFlight = this.saveFlight.bind(this);
         
         Request
-            .get("https://api.schiphol.nl/public-flights/flights?app_id=84d73276&app_key=f9177c625c6b99c31938170e49299455")
+            .get("https://api.schiphol.nl/public-flights/flights")
             .set('Accept','application/json')
-            .set('ResourceVersion','v3')
+            .set('app_id', 'cb370d02')
+            .set('app_key', '4bb7b4dce9591d03e841046a661f1dd6')
+            .set('ResourceVersion','v4')
             .then((response) => {
                 this.setState({
                     items: response.body.flights,
